@@ -1,0 +1,44 @@
+{
+  "n_train_s1_entities": 2176821,
+  "n_val_s1_entities": 30000,
+  "train_candidate_pairs_examined": 3355550,
+  "train_positive_pairs_examined": 150348,
+  "train_negative_pairs_examined": 3205202,
+  "train_positives_retained": 150348,
+  "train_negatives_retained": 749633,
+  "train_final_rows": 899981,
+  "pos_to_neg_ratio": "1 : 4.99",
+  "blocking_recall_ceiling": 0.7243179099293791,
+  "blocking_stats": {
+    "mean": 55.8997,
+    "p50": 60.0,
+    "p90": 60.0,
+    "p95": 60.0,
+    "p99": 60.0,
+    "max": 60
+  },
+  "winning_config": "none",
+  "best_threshold": 0.84,
+  "val_macro_f05": 0.7689053160833098,
+  "comparison_results": [
+    {
+      "mode": "balanced",
+      "label": "class_weight='balanced'",
+      "best_threshold": 0.96,
+      "val_macro_f05": 0.7677777721236416
+    },
+    {
+      "mode": "none",
+      "label": "No class weighting (default)",
+      "best_threshold": 0.84,
+      "val_macro_f05": 0.7689053160833098
+    },
+    {
+      "mode": "moderate",
+      "label": "Moderate positive weighting (scale_pos_weight=2.0)",
+      "best_threshold": 0.905,
+      "val_macro_f05": 0.7684014722920076
+    }
+  ],
+  "backend": "lightgbm"
+}

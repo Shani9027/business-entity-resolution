@@ -1,0 +1,48 @@
+Traceback (most recent call last):
+  File "C:\Program Files\Python314\Lib\argparse.py", line 2649, in _get_value
+    result = type_func(arg_string)
+ValueError: invalid literal for int() with base 10: '42python'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python314\Lib\argparse.py", line 2040, in _parse_known_args2
+    namespace, args = self._parse_known_args(args, namespace, intermixed)
+                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\argparse.py", line 2291, in _parse_known_args
+    start_index = consume_optional(start_index)
+  File "C:\Program Files\Python314\Lib\argparse.py", line 2215, in consume_optional
+    take_action(action, args, option_string)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\argparse.py", line 2101, in take_action
+    argument_values = self._get_values(action, argument_strings)
+  File "C:\Program Files\Python314\Lib\argparse.py", line 2617, in _get_values
+    value = self._get_value(action, arg_string)
+  File "C:\Program Files\Python314\Lib\argparse.py", line 2661, in _get_value
+    raise ArgumentError(action, msg % args)
+argparse.ArgumentError: argument --seed: invalid int value: '42python'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Shani\OneDrive\Desktop\E-Cell\business_entity_resolution_updated_v2\business_entity_resolution\src\train.py", line 423, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Shani\OneDrive\Desktop\E-Cell\business_entity_resolution_updated_v2\business_entity_resolution\src\train.py", line 173, in main
+    args = ap.parse_args()
+  File "C:\Program Files\Python314\Lib\argparse.py", line 2001, in parse_args
+    args, argv = self.parse_known_args(args, namespace)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\argparse.py", line 2011, in parse_known_args
+    return self._parse_known_args2(args, namespace, intermixed=False)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\argparse.py", line 2042, in _parse_known_args2
+    self.error(str(err))
+    ~~~~~~~~~~^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\argparse.py", line 2771, in error
+    self.exit(2, _('%(prog)s: error: %(message)s\n') % args)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python314\Lib\argparse.py", line 2758, in exit
+    _sys.exit(status)
+    ~~~~~~~~~^^^^^^^^
+SystemExit: 2
