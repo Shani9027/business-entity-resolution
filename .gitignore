@@ -22,3 +22,5 @@ output/
 
 # Runtime UI cache
 ui/runtime/
+
+*.pem
