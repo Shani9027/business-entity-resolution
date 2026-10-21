@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Entity Resolution</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="page-header">
+      <p class="eyebrow">Entity matching workspace</p>
+      <h1>Business Entity Resolution</h1>
+      <p class="subtitle">Explore predicted business matches across Source 1, Source 2, and Source 3.</p>
+    </header>
+
+    <section id="summary" class="summary-grid" aria-label="Dashboard overview"></section>
+
+    <section class="lookup-card" aria-labelledby="lookup-heading">
+      <div>
+        <h2 id="lookup-heading">Find a Source-1 business</h2>
+        <p class="muted">Search by business name or entity ID, then review the model's predicted matches.</p>
+      </div>
+      <div class="search-box">
+        <div class="search-line">
+          <input id="search" type="search" placeholder="Search business name or ID" autocomplete="off">
+          <button id="find-matches" class="button primary" type="button">Find Matches</button>
+        </div>
+        <div id="suggestions" class="suggestions" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <div id="message" class="message" role="status" aria-live="polite"></div>
+
+    <section id="selected-business" class="selected-card" aria-label="Selected business"></section>
+
+    <section class="results-card" aria-labelledby="matches-heading">
+      <div class="section-heading">
+        <div>
+          <h2 id="matches-heading">Predicted matches</h2>
+          <p id="match-message" class="muted">Select a Source-1 business to view predictions.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Matched business</th>
+              <th>Source</th>
+              <th>Business address</th>
+              <th>Country</th>
+            </tr>
+          </thead>
+          <tbody id="matches"></tbody>
+        </table>
+      </div>
+      <nav class="pagination" aria-label="Match pagination">
+        <button id="match-previous" class="button secondary" type="button">Previous</button>
+        <span id="match-page-label"></span>
+        <button id="match-next" class="button secondary" type="button">Next</button>
+      </nav>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
