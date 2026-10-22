@@ -26,3 +26,8 @@ ui/runtime/
 *.pem
 
 *.pem
+
+entity_resolution_lookup.sqlite3
+entity_resolution_lookup.sqlite3-journal
+entity_resolution_lookup.sqlite3-wal
+entity_resolution_lookup.sqlite3-shm
